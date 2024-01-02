@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const CategoryNav = () => {
   return <div>CategoryNav</div>;

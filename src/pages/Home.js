@@ -1,11 +1,19 @@
 import React from "react";
 
-//useFetch hook
-import { useFetch } from "../hooks/useFetch";
+//components
+
+//pages
+import Product from "../components/Product";
+import LatestProducts from "../components/LatestProducts";
+import Hero from "../components/Hero";
 
 const Home = () => {
-  const { data } = useFetch();
-  return <div>Home</div>;
+  return (
+    <section>
+      <Hero />
+      <LatestProducts />
+    </section>
+  );
 };
 
 export default Home;
