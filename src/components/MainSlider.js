@@ -66,7 +66,9 @@ const MainSlider = () => {
                     {slide.titlePart2} <br />
                     {slide.titlePart3}
                   </div>
-                  <button className="btn btn-accent mx-auto lg:mx-0 ">Shop now</button>
+                  <button className="btn btn-accent my-0 mx-auto lg:mx-0 ">
+                    Shop now
+                  </button>
                 </div>
                 <div className="flex-1">
                   <img
