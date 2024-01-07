@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 //imgaes
 import logo from "../img/logo.png";
@@ -15,41 +15,63 @@ import SearchForm from "../components/SearchForm";
 import CategoryNavMobile from "../components/CategoryNavMobile";
 import Cart from "../components/Cart";
 
+// cart context
+import { CartContext } from "../context/CartContext";
+
 const Header = () => {
+  const { isOpen, setIsOpen } = useContext(CartContext);
+  const [catNavMobile, setCatNavMobile] = useState(false);
+
   return (
-    <header>
+    <header className="bg-primary py-6 fixed w-full top-0 z-40 lg:relative xl:mb-[30px]">
       <div className="container mx-auto">
-        <div>
+        <div className="flex flex-row gap-4 lg:items-center justify-between mb-4 xl:mb-0">
           {/**Menu */}
-          <div>
+          <div
+            onClick={() => setCatNavMobile(true)}
+            className="text-3xl xl:hidden cursor-pointer"
+          >
             <FiMenu />
           </div>
           {/* category nav mobile */}
-          <div>
-            <CategoryNavMobile />
+          <div
+            className={`${
+              catNavMobile ? "left-0" : "-left-full"
+            } fixed top-0 bottom-0 z-30 w-full h-screen transition-all duration-200`}
+          >
+            <CategoryNavMobile setCatNavMobile={setCatNavMobile} />
           </div>
           {/* Logo */}
           <Link>
-            <img src={logo} />
+            <img src={logo} alt="" />
           </Link>
           {/* search form only show on desktop */}
-          <div className="hidden w-full xl:flex xl:max-w-[734px] bg-pink-300">
-            search
+          <div className="hidden w-full xl:flex xl:max-w-[734px]">
+            <SearchForm />
           </div>
           {/* phone and cart */}
-          <div>Need Help? 123 456 789</div>
-          <div className="relative cursor-pointer">
-            <SlBag />
-            {/*amount/ quantity */}
-            <div>2</div>
+          <div className="flex gap-x-[10px] items-center">
+            <div className="hidden xl:flex uppercase">Need Help? 123 456 789</div>
+            <div
+              onClick={() => setIsOpen(!isOpen)}
+              className="relative cursor-pointer felx flex-row"
+            >
+              <SlBag className="text-2xl" />
+              {/*amount/ quantity */}
+              <div className="bg-persianyellow text-primary absolute w-[18px] h-[18px] rounded-full top-3 -right-1 text-[13px] flex justify-center items-center font-bold translate-[-0.1em]">2</div>
+            </div>
+            {/* cart */}
+            <div
+              className={`
+            ${isOpen ? "right-0" : "-right-full"}
+            bg-[#75a4d2] shadow-xl fixed top-0 botton-0 w-full z-10 h-screen md:max-w-[500px] transition-all duration-300`}
+            >
+              <Cart />
+            </div>
           </div>
-          {/* cart */}
-          <diV className="bg-[#0e0f10] shadow-xl fixed top-0 botton-0 w-full z-10 md:max-w-[500px] transition-all duration-300">
-            <Cart />
-          </diV>
         </div>
         {/* search form - show on mobile only */}
-        <div className=" lg:hidden">
+        <div className="xl:hidden">
           <SearchForm />
         </div>
       </div>
