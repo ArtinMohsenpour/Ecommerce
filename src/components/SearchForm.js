@@ -24,20 +24,25 @@ const SearchForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(searchTerm);
     if (searchTerm.length > 0) {
       navigate(`/search?query=${searchTerm}`);
       document.querySelector("input").value = "";
       setSearchTerm("");
     } else {
       // if input is empty set animation to true
+      setIsAnimating(true);
 
       console.log("Please search for somthing");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className=" w-full relative">
+    <form
+      onSubmit={handleSubmit}
+      className={`${
+        isAnimating ? "animate-shake" : "animate-none"
+      } w-full relative `}
+    >
       <input
         onChange={handkeSearchInput}
         className="input "
