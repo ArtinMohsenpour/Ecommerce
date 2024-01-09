@@ -3,7 +3,14 @@ import React from "react";
 // icons
 import { FiX } from "react-icons/fi";
 
+import useFetch from "../hooks/useFetch";
+import { Link } from "react-router-dom";
+
 const CategoryNavMobile = ({ setCatNavMobile }) => {
+  //get categories
+
+  const { data } = useFetch("/categories");
+
   return (
     <div className="w-full h-full bg-primary  p-8">
       {/**close icon */}
@@ -13,7 +20,20 @@ const CategoryNavMobile = ({ setCatNavMobile }) => {
       >
         <FiX className="text-3xl" />
       </div>
-      CategoryNavMobile
+      <div className="flex flex-col gap-y-8 ">
+        {data?.map((category) => {
+          return (
+            <Link
+              className="uppercase font-medium"
+              to={`products/${category.id}`}
+              key={category.id}
+            >
+              {category.attributes.title}
+            </Link>
+          );
+        })}
+      </div>
+      
     </div>
   );
 };
