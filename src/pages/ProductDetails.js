@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 //use Params
 import { useParams } from "react-router-dom";
 //use fetch hook
@@ -10,6 +10,8 @@ import { CartContext } from "../context/CartContext";
 //
 
 const ProductDetails = () => {
+  const { addToCart } = useContext(CartContext);
+
   const { id } = useParams();
   //get product data based on id
   const { data } = useFetch(`/products?populate=*&filters[id][$eq]=${id}`);
@@ -19,7 +21,6 @@ const ProductDetails = () => {
   }
   // category title
   const categoryTitle = data[0].attributes.categories.data[0].attributes.title;
-  console.log(categoryTitle);
 
   return (
     <div className="mb-16 pt-44 lg:pt-[30px] xl:pt-0">
@@ -48,7 +49,10 @@ const ProductDetails = () => {
               <div className="text-3xl text-persianyellow">
                 €{data[0].attributes.price}
               </div>
-              <button className="btn bg-persianyellow text-primary ">
+              <button
+                onClick={() => addToCart(data, id)}
+                className="btn bg-persianyellow text-primary "
+              >
                 Add to cart
               </button>
             </div>
