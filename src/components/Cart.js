@@ -15,7 +15,7 @@ const Cart = () => {
         {/* close button */}
         <div
           onClick={() => setIsOpen(false)}
-          className="text-4xl w-20 h-[98px] flex items-center cursor-pointer justify-start "
+          className="text-4xl w-20 h-[98px] flex hover:text-persianyellow items-center cursor-pointer justify-start "
         >
           <IoClose />
         </div>
