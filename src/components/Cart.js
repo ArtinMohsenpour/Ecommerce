@@ -19,7 +19,7 @@ const Cart = () => {
         >
           <IoClose />
         </div>
-        <div>
+        <div className="flex flex-col gap-y-4 px-2  ">
           {/*  */}
           {cart.map((item) => {
             return <CartItem item={item} key={item.id} />;

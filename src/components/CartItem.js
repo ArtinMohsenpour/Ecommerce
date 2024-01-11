@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 //icons
 import { IoClose } from "react-icons/io5";
 // components
 import Qty from "../components/Qty";
+// context
+import { CartContext } from "../context/CartContext";
 
 const CartItem = ({ item }) => {
+  const { removeFromCart } = useContext(CartContext);
+
+  //
   return (
-    <div className="flex gap-x-8 bg-stone-800 p-[10px] rounded-[10px]">
+    <div className="flex gap-x-8 bg-stone-800 p-[10px] rounded-[10px] ">
       <Link to={`product/${item.id}`} className="w-[70px] h-[70px] ">
         <img
           src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
@@ -19,7 +24,10 @@ const CartItem = ({ item }) => {
 
         <div className="flex gap-x-4 mb-3 ">
           <Link to={`product/${item.id}`}>{item.attributes.title}</Link>
-          <div className=" cursor-pointer text-[24px] hover:text-persianyellow transition-all ">
+          <div
+            onClick={() => removeFromCart(item.id)}
+            className=" cursor-pointer text-[24px] hover:text-persianyellow transition-all "
+          >
             <IoClose />
           </div>
         </div>
@@ -27,10 +35,9 @@ const CartItem = ({ item }) => {
           {/* quantiry */}
           <div className="flex gap-x-4 mb-2">
             <Qty item={item} />
-
-            <div className="text-persianyellow text-xl">
-              € {item.attributes.price * item.amount}
-            </div>
+          </div>
+          <div className="text-persianyellow text-xl">
+            € {item.attributes.price * item.amount}
           </div>
         </div>
         {/* price */}

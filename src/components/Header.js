@@ -19,7 +19,7 @@ import Cart from "../components/Cart";
 import { CartContext } from "../context/CartContext";
 
 const Header = () => {
-  const { isOpen, setIsOpen } = useContext(CartContext);
+  const { isOpen, setIsOpen, itemsAmount } = useContext(CartContext);
   const [catNavMobile, setCatNavMobile] = useState(false);
 
   return (
@@ -51,14 +51,18 @@ const Header = () => {
           </div>
           {/* phone and cart */}
           <div className="flex gap-x-[10px] items-center">
-            <div className="hidden xl:flex uppercase">Need Help? 123 456 789</div>
+            <div className="hidden xl:flex uppercase">
+              Need Help? 123 456 789
+            </div>
             <div
               onClick={() => setIsOpen(!isOpen)}
               className="relative cursor-pointer felx flex-row"
             >
               <SlBag className="text-2xl" />
               {/*amount/ quantity */}
-              <div className="bg-persianyellow text-primary absolute w-[18px] h-[18px] rounded-full top-3 -right-1 text-[13px] flex justify-center items-center font-bold translate-[-0.1em]">2</div>
+              <div className="bg-persianyellow text-primary absolute w-[18px] h-[18px] rounded-full top-3 -right-1 text-[13px] flex justify-center items-center font-bold translate-[-0.1em]">
+                {itemsAmount}
+              </div>
             </div>
             {/* cart */}
             <div
