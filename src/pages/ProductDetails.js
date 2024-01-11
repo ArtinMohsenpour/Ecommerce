@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 //use Params
 import { useParams } from "react-router-dom";
 //use fetch hook
@@ -10,6 +10,8 @@ import { CartContext } from "../context/CartContext";
 //
 
 const ProductDetails = () => {
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+
   const { addToCart } = useContext(CartContext);
 
   const { id } = useParams();
@@ -51,9 +53,9 @@ const ProductDetails = () => {
               </div>
               <button
                 onClick={() => addToCart(data, id)}
-                className="btn bg-persianyellow text-primary "
+                className="btn bg-persianyellow text-primary   sm:text-base"
               >
-                Add to cart
+                {windowSize.current[0] > 640 ? "Add to cart" : "Add"}
               </button>
             </div>
           </div>

@@ -56,11 +56,54 @@ const CartProvider = ({ children }) => {
     setCart(newCart);
   };
 
-  //
+  // handle input
   const inputHandler = (e, id) => {
     const value = parseInt(e.target.value);
+    // find the item in the cart by id
+
+    const cartItem = cart.find((item) => {
+      return item.id === id;
+    });
+
+    if (cartItem) {
+      const newCart = cart.map((item) => {
+        if (item.id === id) {
+          if (isNaN(value)) {
+            setAmount(1);
+          } else {
+            setAmount(value);
+            return { ...item, amount: value };
+          }
+        } else {
+          return item;
+        }
+      });
+      setCart(newCart);
+    }
+    setIsOpen(true);
   };
 
+  //handle select
+  const selectHandler = (e, id) => {
+    const value = e.target.value;
+    const cartItem = cart.find((item) => {
+      return item.id === id;
+    });
+
+    if (cartItem) {
+      const newCart = [...cart].map((item) => {
+        if (item.id === id) {
+          setAmount(value);
+          return { ...item, amount: value };
+        } else {
+          return item;
+        }
+      });
+      setCart(newCart);
+    }
+  };
+
+  //
   return (
     <CartContext.Provider
       value={{
@@ -71,6 +114,7 @@ const CartProvider = ({ children }) => {
         removeFromCart,
         itemsAmount,
         inputHandler,
+        selectHandler,
       }}
     >
       {children}
