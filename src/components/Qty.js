@@ -10,7 +10,7 @@ const Qty = ({ item }) => {
     <div className="flex gap-x-6 items-center text-primary">
       {item.amount < 10 ? (
         <select
-          onClick={(e) => selectHandler(e, item.id)}
+          onChange={(e) => selectHandler(e, item.id)}
           value={item.amount}
           className="p-2 rounded-lg w-[80px] h-10 outline-none text-primary "
         >

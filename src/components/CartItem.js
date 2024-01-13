@@ -37,7 +37,7 @@ const CartItem = ({ item }) => {
             <Qty item={item} />
           </div>
           <div className="text-persianyellow text-xl">
-            € {item.attributes.price * item.amount}
+            € {(item.attributes.price * item.amount).toFixed(2)}
           </div>
         </div>
         {/* price */}

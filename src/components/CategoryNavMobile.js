@@ -25,6 +25,7 @@ const CategoryNavMobile = ({ setCatNavMobile }) => {
           return (
             <Link
               className="uppercase font-medium"
+              onClick={() => setCatNavMobile(false)}
               to={`products/${category.id}`}
               key={category.id}
             >
@@ -33,7 +34,6 @@ const CategoryNavMobile = ({ setCatNavMobile }) => {
           );
         })}
       </div>
-      
     </div>
   );
 };

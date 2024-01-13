@@ -18,6 +18,7 @@ const CategoryNav = () => {
               <Link
                 to={`/products/${category.id}`}
                 key={category.id}
+                
                 className="capitalize cursor-pointer"
               >
                 {category.attributes.title}

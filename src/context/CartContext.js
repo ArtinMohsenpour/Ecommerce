@@ -85,7 +85,7 @@ const CartProvider = ({ children }) => {
 
   //handle select
   const selectHandler = (e, id) => {
-    const value = e.target.value;
+    const value = parseInt(e.target.value);
     const cartItem = cart.find((item) => {
       return item.id === id;
     });
