@@ -12,7 +12,7 @@ const CartItem = ({ item }) => {
 
   //
   return (
-    <div className="flex gap-x-8 bg-stone-800 p-[10px] rounded-[10px] ">
+    <div className="flex gap-x-8 bg-zinc-800 p-[10px] rounded-[10px] ">
       <Link to={`product/${item.id}`} className="w-[70px] h-[70px] ">
         <img
           src={`http://localhost:1337${item.attributes.image.data.attributes.url}`}
