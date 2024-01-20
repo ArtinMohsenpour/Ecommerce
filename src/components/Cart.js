@@ -17,22 +17,26 @@ const Cart = () => {
   const stripePromise = loadStripe(
     "pk_test_51OYpcrEPT5nThG7UTgmmOLad2dfjqMkA5hPamx027gpudVDFp6lN5otTxNlFvHPXMHLEhnMl5mtFV65YW9hxkdDV00d12ACDwW"
   );
-
   const handlePayment = async () => {
     try {
       console.log("function active");
       const stripe = await stripePromise;
+
+      // Make sure you replace "/orders" with the correct API endpoint to create an order
       const res = await request.post("/orders", {
         cart,
       });
 
+      // Ensure that res.data.stripeSession.id is a valid Stripe Checkout Session ID
       await stripe.redirectToCheckout({
         sessionId: res.data.stripeSession.id,
       });
     } catch (error) {
-      console.log(error.message);
-      console.log(error);
-      console.error(error.response.data);
+      console.log("Error in handlePayment:", error.message);
+      console.error(error);
+      if (error.response) {
+        console.error("Response data:", error.response.data);
+      }
     }
   };
 

@@ -4,13 +4,14 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 //pages
 import Home from "./pages/Home";
+import SuccessPage from "./pages/Success";
 import Products from "./pages/Products";
 import Search from "./pages/Search";
 import ProductDetails from "./pages/ProductDetails";
 
 //components
-import {Header} from "./components";
-import {Footer} from "./components";
+import { Header } from "./components";
+import { Footer } from "./components";
 
 //Layout
 const Layout = () => {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "/success", element: <SuccessPage /> },
       { path: "/products/:id", element: <Products /> },
       { path: "/product/:id", element: <ProductDetails /> },
       { path: "/search", element: <Search /> },
