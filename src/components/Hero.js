@@ -4,8 +4,8 @@ import CategoryNav from "../components/CategoryNav";
 import MainSlider from "../components/MainSlider";
 
 //images
-import PromoImg1 from "../img/promo_img1.png";
-import PromoImg2 from "../img/promo_img2.png";
+import PromoImg1 from "../img/promo_img5.png";
+import PromoImg2 from "../img/promo_img4.png";
 
 const Hero = () => {
   return (
@@ -25,7 +25,7 @@ const Hero = () => {
             <div className="grad flex-1 h-[250px] rounded-[8px] overflow-hidden relative p-6">
               <div className="flex flex-col max-w-[144px] h-full justify-center">
                 <div className="text-[20px] uppercase font-medium loading-tight mb-4">
-                  Save 25% on mirrorless cameras
+                  Save 25% on Zafaran products
                 </div>
                 <a href="#" className="uppercase text-persianyellow ">
                   Shop Now
@@ -33,14 +33,14 @@ const Hero = () => {
               </div>
               <img
                 src={PromoImg2}
-                className="absolute z-20 top-4 -right-4"
+                className="absolute z-20 top-1 -right-12 "
                 alt="promo img"
               />
             </div>
             <div className="grad flex-1 h-[250px] rounded-[8px] overflow-hidden relative p-6">
               <div className="flex flex-col max-w-[144px] h-full justify-center">
                 <div className="text-[20px] uppercase font-medium loading-tight mb-4">
-                  Save 35% on all dslr cameras
+                  Save 35% on all persian Zafaran!
                 </div>
                 <a href="#" className="uppercase text-persianyellow ">
                   Shop Now
@@ -48,7 +48,7 @@ const Hero = () => {
               </div>
               <img
                 src={PromoImg1}
-                className="absolute z-20 -top-4 -right-4"
+                className="absolute z-20 -top-4 -right-8 w-[165px] h-auto"
                 alt="promo img"
               />
             </div>

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 
 //imgaes
-import logo from "../img/logo.png";
+import logo from "../img/logo2.png";
 
 // icons
 import { SlBag } from "react-icons/sl";

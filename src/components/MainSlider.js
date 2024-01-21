@@ -10,14 +10,16 @@ import "../slider.css";
 
 //import required modules
 import { Pagination } from "swiper";
-import CameraImg from "../img/camera.png";
+import CameraImg1 from "../img/mainpromo2.png";
+import CameraImg2 from "../img/mainpromo1.png";
+import CameraImg3 from "../img/mainpromo3.png";
 //components
 // import Product from "../components/Product";
 
 // data
 const sliderData = [
   {
-    img: CameraImg,
+    img: CameraImg1,
     pretitle: "Special offer",
     titlePart1: "Save 20%",
     titlePart2: "On your",
@@ -25,7 +27,7 @@ const sliderData = [
     btnText: "Shop now",
   },
   {
-    img: CameraImg,
+    img: CameraImg2,
     pretitle: "Special offer",
     titlePart1: "Save 20%",
     titlePart2: "On your",
@@ -33,7 +35,7 @@ const sliderData = [
     btnText: "Shop now",
   },
   {
-    img: CameraImg,
+    img: CameraImg3,
     pretitle: "Special offer",
     titlePart1: "Save 20%",
     titlePart2: "On your",
@@ -72,7 +74,7 @@ const MainSlider = () => {
                 </div>
                 <div className="flex-1">
                   <img
-                    className="xl:absolute xl:-right-16 xl:-botton-12"
+                    className="xl:absolute xl:-right-16 xl:-botton-12 -mr-12 w-auto h-auto"
                     src={slide.img}
                     alt=""
                   />

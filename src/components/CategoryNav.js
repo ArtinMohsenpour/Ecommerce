@@ -18,13 +18,19 @@ const CategoryNav = () => {
               <Link
                 to={`/products/${category.id}`}
                 key={category.id}
-                
                 className="capitalize cursor-pointer"
               >
                 {category.attributes.title}
               </Link>
             );
           })}
+          {!data && (
+            <div className="container flex bg-red-500 text center justify-center items-center mx-auto px-2 py-2 rounded-lg ">
+              <p className="text-center ">
+                Currently backend server is offline! please try again later.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </aside>
