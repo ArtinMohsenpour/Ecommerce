@@ -21,7 +21,7 @@ const Cart = () => {
   );
   const handlePayment = async () => {
     try {
-      console.log("function active");
+      // console.log("function active");
       const stripe = await stripePromise;
 
       // Make sure you replace "/orders" with the correct API endpoint to create an order
