@@ -2,7 +2,6 @@ import React from "react";
 //link
 import { Link } from "react-router-dom";
 
-
 const Product = ({ product }) => {
   return (
     <Link to={`/product/${product.id}`}>
@@ -32,7 +31,7 @@ const Product = ({ product }) => {
           </div>
           {/* title */}
           <div className="text-[15px] mb-4 lg:mb-9">
-            {product.attributes.title.substring(0, 35)}...
+            {product.attributes.title.substring(0, 20)}...
           </div>
           {/* price */}
           <div className="text-lg text-persianyellow">
