@@ -2,9 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 //use fetch
 import useFetch from "../hooks/useFetch";
+import {categories} from "../context/Data";
 
 const CategoryNav = () => {
-  const { data } = useFetch("/categories");
+  //const { data } = useFetch("/categories");
+  // console.log(categories);
+  const data = categories; 
 
   return (
     <aside className="hidden xl:flex">

@@ -10,16 +10,33 @@ import useFetch from "../hooks/useFetch";
 import CategoryNav from "../components/CategoryNav";
 import Product from "../components/Product";
 
+import { categories } from "../context/Data";
+import { products } from "../context/Data";
+
 const Search = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const searchTerm = searchParams.get("query");
   console.log(searchTerm);
   // get product based on search term
-  const { data } = useFetch(
-    `/products?populate=*&filters[title][$contains]=${searchTerm}`
-  );
-  //console.log(data);
+  // const { data } = useFetch(
+  //   `/products?populate=*&filters[title][$contains]=${searchTerm}`
+  // );
+
+  let data = products.map((product) => {
+    const title = product.attributes.title.toLocaleLowerCase();
+    const searchTerms = searchTerm.toLocaleLowerCase();
+
+    if (title.includes(searchTerms)) {
+      return product;
+    } else {
+    }
+  });
+  data = data.filter(function (element) {
+    return element !== undefined;
+  });
+
+  console.log(data);
   return (
     <div className="mb-[30px] pt-40 lg:pt-4 xl:pt-0">
       <div className="container mx-auto">

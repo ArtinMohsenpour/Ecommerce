@@ -23,7 +23,7 @@ const Header = () => {
   const [catNavMobile, setCatNavMobile] = useState(false);
 
   return (
-    <header className="bg-primary py-6 fixed w-full top-0 z-40 lg:relative xl:mb-[30px]">
+    <header className="bg-primary py-3 fixed w-full top-0 z-40 lg:relative xl:mb-[30px]">
       <div className="container mx-auto">
         <div className="flex flex-row gap-4 lg:items-center justify-between mb-4 xl:mb-0">
           {/**Menu */}
@@ -42,7 +42,7 @@ const Header = () => {
             <CategoryNavMobile setCatNavMobile={setCatNavMobile} />
           </div>
           {/* Logo */}
-          <Link>
+          <Link className="w-[20rem]">
             <img src={logo} alt="" />
           </Link>
           {/* search form only show on desktop */}
@@ -51,8 +51,8 @@ const Header = () => {
           </div>
           {/* phone and cart */}
           <div className="flex gap-x-[10px] items-center">
-            <div className="hidden xl:flex uppercase">
-              Need Help? 123 456 789
+            <div className="hidden xl:flex uppercase w-[6rem]">
+              Need Help?
             </div>
             <div
               onClick={() => setIsOpen(!isOpen)}

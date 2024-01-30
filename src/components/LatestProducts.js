@@ -3,11 +3,13 @@ import ProductSlider from "../components/ProductSlider";
 
 //useFetch hook
 import useFetch from "../hooks/useFetch";
+import { products } from "../context/Data";
 
 const LatestProducts = () => {
   //get new products
-  const { data } = useFetch("/products?populate=*&filters[isNew]=true");
-
+  //const { data } = useFetch("/products?populate=*&filters[isNew]=true");
+  const data = products;
+  console.log(data);
   return (
     <div className="mb-16">
       <div className="container mx-auto">

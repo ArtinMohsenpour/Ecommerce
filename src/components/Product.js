@@ -20,7 +20,7 @@ const Product = ({ product }) => {
         <div className="w-full h-[200px] flex items-center justify-center relative ">
           <img
             className="w-[160px] h-[160px] group-hover:scale-90 transition-all"
-            src={`http://localhost:1337${product.attributes.image.data.attributes.url}`}
+            src={`${product.attributes.image}`}
             alt=""
           />
         </div>
@@ -28,7 +28,7 @@ const Product = ({ product }) => {
         <div className="px-6 flex flex-col pb-8">
           {/* categoty title */}
           <div className="capitalize text-sm text-persianyellow  mb-2">
-            {product.attributes.categories.data[0].attributes.title}
+            {product.attributes.category}
           </div>
           {/* title */}
           <div className="text-[15px] mb-4 lg:mb-9">
