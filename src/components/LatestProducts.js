@@ -9,7 +9,7 @@ const LatestProducts = () => {
   //get new products
   //const { data } = useFetch("/products?populate=*&filters[isNew]=true");
   const data = products;
-  console.log(data);
+  
   return (
     <div className="mb-16">
       <div className="container mx-auto">

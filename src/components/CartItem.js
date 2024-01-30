@@ -42,9 +42,9 @@ const CartItem = ({ item }) => {
         </div>
         {/* price */}
         <div>
-          <span className="text-persianyellow">
+          <div className="text-persianyellow">
             € {item.attributes.price} per unit
-          </span>
+          </div>
         </div>
       </div>
     </div>
