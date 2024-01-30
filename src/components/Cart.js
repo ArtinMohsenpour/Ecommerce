@@ -10,6 +10,12 @@ import { request } from "../request";
 
 //stripe
 import { loadStripe } from "@stripe/stripe-js";
+const express = require("express");
+const app = express();
+const stripe = require("stripe")(
+  "pk_live_51OeKITKVdjZ5wncxKfnGATop2DeoVy4bSK4tiBO9SunukZL5eQjRuVZRrDt9BIynjHAKekV6B8I6AORdSB6k7l4C00pRrC1KfH"
+);
+// sk_test_51OeKITKVdjZ5wncxhoKFPlonMusrJjKPJG89Wmd5AS6UAmGljbF0vQbcg0RXwLbPvKtzAOg8mF4TVsXo0nXP370C004DJKurAe
 
 const Cart = () => {
   const { setIsOpen, cart, total, clearCart } = useContext(CartContext);
@@ -94,7 +100,9 @@ const Cart = () => {
               onClick={handlePayment}
               className="btn btn-accent hover:bg-persianyellow text-primary flex-1 px-2 gap-x-2"
             >
-              Checkout
+              <form action="/create-checkout-session" method="POST">
+                <button type="submit">Checkout</button>
+              </form>
               <IoArrowForward className="text-lg " />
             </button>
           </div>
