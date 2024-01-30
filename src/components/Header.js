@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 
 //imgaes
-import logo from "../img/logo2.png";
+import logo from "../img/logo21.png";
 
 // icons
 import { SlBag } from "react-icons/sl";
@@ -29,7 +29,7 @@ const Header = () => {
           {/**Menu */}
           <div
             onClick={() => setCatNavMobile(true)}
-            className="text-3xl xl:hidden cursor-pointer"
+            className="text-3xl xl:hidden cursor-pointer mt-2"
           >
             <FiMenu />
           </div>
@@ -42,7 +42,7 @@ const Header = () => {
             <CategoryNavMobile setCatNavMobile={setCatNavMobile} />
           </div>
           {/* Logo */}
-          <Link className="w-[20rem]">
+          <Link className="w-[20rem] top-0">
             <img src={logo} alt="" />
           </Link>
           {/* search form only show on desktop */}
@@ -51,9 +51,7 @@ const Header = () => {
           </div>
           {/* phone and cart */}
           <div className="flex gap-x-[10px] items-center">
-            <div className="hidden xl:flex uppercase w-[6rem]">
-              Need Help?
-            </div>
+            <div className="hidden xl:flex uppercase w-[6rem]">Need Help?</div>
             <div
               onClick={() => setIsOpen(!isOpen)}
               className="relative cursor-pointer felx flex-row"
