@@ -6,7 +6,7 @@ import {categories} from "../context/Data";
 
 const CategoryNav = () => {
   //const { data } = useFetch("/categories");
-  // console.log(categories);
+ // console.log(categories);
   const data = categories; 
 
   return (

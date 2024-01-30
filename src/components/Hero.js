@@ -13,11 +13,11 @@ const Hero = () => {
       <div className="container mx-auto">
         <div className="flex flex-col gap-x-[30px] xl:flex-row xl:gap-x-[30px]">
           {/* sidebar */}
-          <div>
+          <div className="w-[350px] lg:max-w-[220px] xl:max-w-[420px]">
             <CategoryNav />
           </div>
           {/* main slider */}
-          <div className="w-full max-w-lg  lg:max-w-[734px] mx-auto">
+          <div className="w-full max-w-lg mb-8 lg:max-w-[734px] mx-auto">
             <MainSlider />
           </div>
           {/* promo imgaes */}
@@ -33,7 +33,7 @@ const Hero = () => {
               </div>
               <img
                 src={PromoImg2}
-                className="absolute z-20 top-1 -right-12 "
+                className="absolute z-20 -top-10 -right-[100px] sm:-top-11 sm:flex xl:hidden xxl:flex"
                 alt="promo img"
               />
             </div>
@@ -48,7 +48,7 @@ const Hero = () => {
               </div>
               <img
                 src={PromoImg1}
-                className="absolute z-20 -top-4 -right-8 w-[165px] h-auto"
+                className="absolute z-20 -top-4 -right-8 w-[165px] h-auto sm:flex xl:hidden xxl:flex"
                 alt="promo img"
               />
             </div>
