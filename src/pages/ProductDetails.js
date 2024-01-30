@@ -19,8 +19,8 @@ const ProductDetails = () => {
   const { addToCart } = useContext(CartContext);
 
   const { id } = useParams();
-  console.log(id);
-  const category = categories.filter((category) => category.id == id);
+ 
+  //const category = categories.filter((category) => category.id == id);
 
   //get products based on category id
   // const { data } = useFetch(
