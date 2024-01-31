@@ -38,6 +38,7 @@ const Hero = () => {
                 src={PromoImg2}
                 className="absolute z-20 -top-10 -right-[100px] sm:-top-11 sm:flex xl:hidden xxl:flex"
                 alt="promo img"
+                loading="lazy"
               />
             </div>
             <div className="grad flex-1 h-[250px] rounded-[8px] overflow-hidden relative p-6">
@@ -55,6 +56,7 @@ const Hero = () => {
                 src={PromoImg1}
                 className="absolute z-20 -top-4 -right-8 w-[165px] h-auto sm:flex xl:hidden xxl:flex"
                 alt="promo img"
+                loading="lazy"
               />
             </div>
           </div>

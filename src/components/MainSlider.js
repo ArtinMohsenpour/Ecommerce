@@ -79,7 +79,11 @@ const MainSlider = () => {
                   <img
                     className="sm:ml-[3.5rem] sm:mt-6 xl:absolute xl:-right-16 xl:-botton-12 mr-[4rem] w-auto h-auto"
                     src={slide.img}
-                    alt=""
+                    alt="main slide photo"
+                    rel="preload"
+                    fetchpriority="high"
+                    as="image"
+                    loading="lazy"
                   />
                 </div>
               </div>
