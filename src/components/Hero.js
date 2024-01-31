@@ -2,6 +2,7 @@ import React from "react";
 //import components
 import CategoryNav from "../components/CategoryNav";
 import MainSlider from "../components/MainSlider";
+import { Link } from "react-router-dom";
 
 //images
 import PromoImg1 from "../img/promo_img5.png";
@@ -27,9 +28,11 @@ const Hero = () => {
                 <div className="text-[20px] uppercase font-medium loading-tight mb-4">
                   Save 25% on Zafaran products
                 </div>
-                <a href="#" className="uppercase text-persianyellow ">
-                  Shop Now
-                </a>
+                <Link to={"./products/2"}>
+                  <a href="#" className="uppercase text-persianyellow ">
+                    Shop Now
+                  </a>
+                </Link>
               </div>
               <img
                 src={PromoImg2}
@@ -42,9 +45,11 @@ const Hero = () => {
                 <div className="text-[20px] uppercase font-medium loading-tight mb-4">
                   Save 35% on all persian Zafaran!
                 </div>
-                <a href="#" className="uppercase text-persianyellow ">
-                  Shop Now
-                </a>
+                <Link to={"./products/3"}>
+                  <a href="#" className="uppercase text-persianyellow ">
+                    Shop Now
+                  </a>
+                </Link>
               </div>
               <img
                 src={PromoImg1}

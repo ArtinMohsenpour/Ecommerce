@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 // import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -13,6 +13,7 @@ import { Pagination } from "swiper";
 import CameraImg1 from "../img/mainpromo2.png";
 import CameraImg2 from "../img/mainpromo1.png";
 import CameraImg3 from "../img/mainpromo3.png";
+import { Link } from "react-router-dom";
 //components
 // import Product from "../components/Product";
 
@@ -48,7 +49,7 @@ const MainSlider = () => {
   return (
     <Swiper
       modules={[Pagination]}
-      loop={true}
+      loop={false}
       pagination={{
         clickable: true,
       }}
@@ -68,13 +69,15 @@ const MainSlider = () => {
                     {slide.titlePart2} <br />
                     {slide.titlePart3}
                   </div>
-                  <button className="btn btn-accent my-0 mx-auto lg:mx-0 ">
-                    Shop now
-                  </button>
+                  <Link to={"./products/1"}>
+                    <button className="btn btn-accent my-0 mx-auto lg:mx-0 ">
+                      Shop now
+                    </button>
+                  </Link>
                 </div>
                 <div className="flex-1">
                   <img
-                    className="xl:absolute xl:-right-16 xl:-botton-12 -mr-12 w-auto h-auto"
+                    className="sm:ml-[3.5rem] sm:mt-6 xl:absolute xl:-right-16 xl:-botton-12 mr-[4rem] w-auto h-auto"
                     src={slide.img}
                     alt=""
                   />
