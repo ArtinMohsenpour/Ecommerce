@@ -49,7 +49,7 @@ const Header = () => {
           </div>
           {/* Logo */}
           <Link className="w-[20rem] top-0">
-            <img src={logo} alt="" />
+            <img src={logo} alt="company-logo" />
           </Link>
           {/* search form only show on desktop */}
           <div className="hidden w-full xl:flex xl:max-w-[734px]">

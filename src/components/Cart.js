@@ -51,7 +51,7 @@ const Cart = () => {
           className="text-4xl w-full h-[98px] z-20 flex hover:text-persianyellow items-center cursor-pointer justify-between "
         >
           <IoClose className="text-xxl" />
-          <div className="flex-1 top-8  right-8  left-0 flex  items-center flex-col text-white/30 ">
+          <div className="flex-1 top-8  right-8  left-0 flex  items-center flex-col text-[#B3B3B3] ">
             <sapn className=" mr-11">Your Cart</sapn>
           </div>
         </div>
@@ -103,7 +103,7 @@ const Cart = () => {
             </button>
           </div>
         ) : (
-          <div className="h-full absolute  top-20 right-0 left-0 flex  justify-center items-center -z-1 flex-col text-white/30">
+          <div className="h-full absolute  top-20 right-0 left-0 flex  justify-center items-center -z-1 flex-col text-[#B3B3B3]">
             <div className="text-2xl">Your cart is empty!</div>
             <div className="text-6xl">
               <IoCartOutline />

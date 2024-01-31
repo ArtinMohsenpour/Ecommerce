@@ -49,7 +49,10 @@ const SearchForm = () => {
         type="text "
         placeholder="Search for a product..."
       />
-      <button className="btn bg-persianyellow absolute top-0 right-0 rounded-tl-none rounded-bl-none">
+      <button
+        aria-label="search-button"
+        className="btn bg-persianyellow absolute top-0 right-0 rounded-tl-none rounded-bl-none"
+      >
         <FiSearch className="text-xl" />
       </button>
     </form>
