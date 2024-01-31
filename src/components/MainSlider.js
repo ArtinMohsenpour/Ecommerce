@@ -83,7 +83,6 @@ const MainSlider = () => {
                     rel="preload"
                     fetchpriority="high"
                     as="image"
-                    loading="lazy"
                   />
                 </div>
               </div>
