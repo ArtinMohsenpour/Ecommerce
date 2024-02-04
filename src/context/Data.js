@@ -12,6 +12,17 @@ import twogsk from "../img/zafaran/2gsk.png";
 import halfmsk from "../img/zafaran/0.5msk.png";
 import onemsk from "../img/zafaran/1msk.png";
 import fivegsk from "../img/zafaran/5gsk.png";
+import twomsk from "../img/zafaran/2msk.png";
+import fivemsk from "../img/zafaran/5msk.png";
+
+//
+
+import onegt from "../img/zafaran/1gt.png";
+import halfmt from "../img/zafaran/0.5mt.png";
+import onemt from "../img/zafaran/1mt.png";
+import onemkt from "../img/zafaran/1mkt.png";
+import twomt from "../img/zafaran/2mt.png";
+import fivemt from "../img/zafaran/5mt.png";
 
 export const categories = [
   {
@@ -43,7 +54,7 @@ export const products = [
     attributes: {
       category: "zafaran bahraman",
       image: oneMesgal,
-      isNew: true,
+      isNew: false,
       price: 14.99,
       title: "4.608 GR Bahraman Saffron- Saffron spice from Mashhad ",
       description:
@@ -55,7 +66,7 @@ export const products = [
     attributes: {
       category: "zafaran bahraman",
       image: halfgram,
-      isNew: true,
+      isNew: false,
       price: 3.99,
       title: "0.5 GR Bahraman Saffron- Saffron spice from Mashhad ",
       description:
@@ -67,7 +78,7 @@ export const products = [
     attributes: {
       category: "zafaran bahraman",
       image: fivegram,
-      isNew: true,
+      isNew: false,
       price: 19.99,
       title: "5 GR Bahraman Saffron- Premium top Negin ",
       description:
@@ -103,7 +114,7 @@ export const products = [
     attributes: {
       category: "zafaran bahraman",
       image: onemesgalkhatam,
-      isNew: true,
+      isNew: false,
       price: 19.99,
       title: "4.608 GR Bahraman Saffron- Premium quality Khatam",
       description:
@@ -127,7 +138,7 @@ export const products = [
     attributes: {
       category: "zafaran saharkhiz",
       image: twogsk,
-      isNew: true,
+      isNew: false,
       price: 7.99,
       title: "2 GR Saffron saharkhiz- High quality",
       description:
@@ -139,7 +150,7 @@ export const products = [
     attributes: {
       category: "zafaran saharkhiz",
       image: halfmsk,
-      isNew: true,
+      isNew: false,
       price: 8.99,
       title: "2.304 GR Saffron saharkhiz- Standard quality",
       description:
@@ -154,6 +165,114 @@ export const products = [
       isNew: true,
       price: 14.99,
       title: "4.608 GR Saffron saharkhiz- Standard quality",
+      description:
+        "Premium saffron of Masma in the amount of a shekel. According to ancient Iranian medicine, saffron is hot and dry. One of the most important medicinal properties of saffron, which has been used since ancient times, is the treatment of depression. Among the medicinal properties of saffron, drinking saffron tea helps digestion; · Saffron has a pain-relieving effect. The other medicinal properties of saffron are that it can purify and strengthen the liver, and the other medicinal properties of saffron are brightening the skin of the face.",
+    },
+  },
+  {
+    id: 11,
+    attributes: {
+      category: "zafaran saharkhiz",
+      image: fivegsk,
+      isNew: false,
+      price: 29.99,
+      title: "5 GR Saffron saharkhiz- Standard quality",
+      description:
+        "Premium saffron of Masma in the amount of a shekel. According to ancient Iranian medicine, saffron is hot and dry. One of the most important medicinal properties of saffron, which has been used since ancient times, is the treatment of depression. Among the medicinal properties of saffron, drinking saffron tea helps digestion; · Saffron has a pain-relieving effect. The other medicinal properties of saffron are that it can purify and strengthen the liver, and the other medicinal properties of saffron are brightening the skin of the face.",
+    },
+  },
+  {
+    id: 12,
+    attributes: {
+      category: "zafaran saharkhiz",
+      image: twomsk,
+      isNew: false,
+      price: 29.99,
+      title: "9.216 GR Saffron saharkhiz- Standard quality",
+      description:
+        "Premium saffron of Masma in the amount of a shekel. According to ancient Iranian medicine, saffron is hot and dry. One of the most important medicinal properties of saffron, which has been used since ancient times, is the treatment of depression. Among the medicinal properties of saffron, drinking saffron tea helps digestion; · Saffron has a pain-relieving effect. The other medicinal properties of saffron are that it can purify and strengthen the liver, and the other medicinal properties of saffron are brightening the skin of the face.",
+    },
+  },
+  {
+    id: 13,
+    attributes: {
+      category: "zafaran saharkhiz",
+      image: fivemsk,
+      isNew: true,
+      price: 49.99,
+      title: "23.04 GR Saffron saharkhiz- Standard quality",
+      description:
+        "Premium saffron of Masma in the amount of a shekel. According to ancient Iranian medicine, saffron is hot and dry. One of the most important medicinal properties of saffron, which has been used since ancient times, is the treatment of depression. Among the medicinal properties of saffron, drinking saffron tea helps digestion; · Saffron has a pain-relieving effect. The other medicinal properties of saffron are that it can purify and strengthen the liver, and the other medicinal properties of saffron are brightening the skin of the face.",
+    },
+  },
+  {
+    id: 14,
+    attributes: {
+      category: "zafaran tavakoli",
+      image: onegt,
+      isNew: false,
+      price: 4.99,
+      title: "1 GR Saffron saharkhiz- Standard quality",
+      description:
+        "Premium saffron of Masma in the amount of a shekel. According to ancient Iranian medicine, saffron is hot and dry. One of the most important medicinal properties of saffron, which has been used since ancient times, is the treatment of depression. Among the medicinal properties of saffron, drinking saffron tea helps digestion; · Saffron has a pain-relieving effect. The other medicinal properties of saffron are that it can purify and strengthen the liver, and the other medicinal properties of saffron are brightening the skin of the face.",
+    },
+  },
+  {
+    id: 15,
+    attributes: {
+      category: "zafaran tavakoli",
+      image: halfmt,
+      isNew: true,
+      price: 9.99,
+      title: "2.304 GR Saffron saharkhiz- Standard quality",
+      description:
+        "Premium saffron of Masma in the amount of a shekel. According to ancient Iranian medicine, saffron is hot and dry. One of the most important medicinal properties of saffron, which has been used since ancient times, is the treatment of depression. Among the medicinal properties of saffron, drinking saffron tea helps digestion; · Saffron has a pain-relieving effect. The other medicinal properties of saffron are that it can purify and strengthen the liver, and the other medicinal properties of saffron are brightening the skin of the face.",
+    },
+  },
+  {
+    id: 16,
+    attributes: {
+      category: "zafaran tavakoli",
+      image: onemt,
+      isNew: false,
+      price: 18.99,
+      title: "4.608 GR Saffron saharkhiz- Standard quality",
+      description:
+        "Premium saffron of Masma in the amount of a shekel. According to ancient Iranian medicine, saffron is hot and dry. One of the most important medicinal properties of saffron, which has been used since ancient times, is the treatment of depression. Among the medicinal properties of saffron, drinking saffron tea helps digestion; · Saffron has a pain-relieving effect. The other medicinal properties of saffron are that it can purify and strengthen the liver, and the other medicinal properties of saffron are brightening the skin of the face.",
+    },
+  },
+  {
+    id: 17,
+    attributes: {
+      category: "zafaran tavakoli",
+      image: onemkt,
+      isNew: true,
+      price: 22.99,
+      title: "4.608 GR Saffron saharkhiz- Standard quality",
+      description:
+        "Premium saffron of Masma in the amount of a shekel. According to ancient Iranian medicine, saffron is hot and dry. One of the most important medicinal properties of saffron, which has been used since ancient times, is the treatment of depression. Among the medicinal properties of saffron, drinking saffron tea helps digestion; · Saffron has a pain-relieving effect. The other medicinal properties of saffron are that it can purify and strengthen the liver, and the other medicinal properties of saffron are brightening the skin of the face.",
+    },
+  },
+  {
+    id: 18,
+    attributes: {
+      category: "zafaran tavakoli",
+      image: twomt,
+      isNew: false,
+      price: 44.99,
+      title: "9.216 GR Saffron saharkhiz- Standard quality",
+      description:
+        "Premium saffron of Masma in the amount of a shekel. According to ancient Iranian medicine, saffron is hot and dry. One of the most important medicinal properties of saffron, which has been used since ancient times, is the treatment of depression. Among the medicinal properties of saffron, drinking saffron tea helps digestion; · Saffron has a pain-relieving effect. The other medicinal properties of saffron are that it can purify and strengthen the liver, and the other medicinal properties of saffron are brightening the skin of the face.",
+    },
+  },
+  {
+    id: 19,
+    attributes: {
+      category: "zafaran tavakoli",
+      image: fivemt,
+      isNew: false,
+      price: 109.99,
+      title: "18.432 GR Saffron saharkhiz- Standard quality",
       description:
         "Premium saffron of Masma in the amount of a shekel. According to ancient Iranian medicine, saffron is hot and dry. One of the most important medicinal properties of saffron, which has been used since ancient times, is the treatment of depression. Among the medicinal properties of saffron, drinking saffron tea helps digestion; · Saffron has a pain-relieving effect. The other medicinal properties of saffron are that it can purify and strengthen the liver, and the other medicinal properties of saffron are brightening the skin of the face.",
     },

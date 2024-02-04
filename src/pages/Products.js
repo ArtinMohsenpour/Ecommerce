@@ -20,7 +20,7 @@ const Products = () => {
   const data = products?.filter(
     (product) => product.attributes.category === category[0].attributes.title
   );
-  console.log(data);
+  //console.log(data);
   if (!(data.length > 1)) {
     return (
       <div className="mb-16 pt-40 lg:pt-0">
@@ -57,7 +57,7 @@ const Products = () => {
           <CategoryNav />
           <main>
             {/*title */}
-            <div className="py-3 text-xl uppercase text-center lg:text-left">
+            <div className="w-fit bg-persianyellow text-primary font-bold  py-3 mb-2 rounded-md text-xl capitalize  px-3 text-center lg:text-left">
               {title}
             </div>
             {/* product grid */}
